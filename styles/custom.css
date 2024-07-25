@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* padding */
+  .section-padding {
+    @apply relative px-6 py-10 mx-auto sm:px-16 sm:py-16 max-w-7xl;
+  }
+  .section-padding-x {
+    @apply px-6 mx-auto sm:px-16 max-w-7xl;
+  }
+  .section-padding-y {
+    @apply py-6 mx-auto sm:py-16 max-w-7xl;
+  }
+
+  /* button */
+  .button-border-white {
+    @apply lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-white sectionP rounded-[50px] text-white transition-all hover:text-secondary  hover:bg-white bg-transparent;
+  }
+  .button-border-yellow {
+    @apply lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-primary sectionP rounded-[50px] text-primary transition-all hover:text-secondary  hover:bg-primary bg-transparent;
+  }
+  .button-yellow {
+    @apply lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 text-center  border-primary sectionP rounded-[50px] text-white transition-all hover:text-primary  hover:bg-transparent bg-primary;
+  }
+
+  /* text */
+  .heroHeadText {
+    @apply font-black lg:text-[70px] md:text-[60px] sm:text-[50px] text-[45px];
+  }
+  .heroP {
+    @apply font-normal lg:text-[20px] sm:text-[18px] xs:text-[16px] text-[14px] leading-[25px] sm:leading-[30px] lg:leading-[35px];
+  }
+  .sectionHeadText {
+    @apply font-black md:text-[40px] sm:text-[35px] xs:text-[30px] text-[25px];
+  }
+  .sectionSecondHead {
+    @apply font-black md:text-[18px] sm:text-[16px] text-[12px] tracking-[8px] text-accent-100  font-poppins uppercase;
+  }
+  .sectionP {
+    @apply lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8;
+  }
+  .slider-button-text {
+    @apply lg:text-[16px] md:text-[14px] sm:text-[12px] text-[10px] sm:leading-7 leading-5 lg:leading-8;
+  }
+  .sectionSmallText {
+    @apply lg:text-[12px] md:text-[11px] sm:text-[10px] text-[8px] leading-4 md:leading-5;
+  }
+  .sectionMediumText {
+    @apply lg:text-[14px] md:text-[12px] sm:text-[11px] text-[10px] leading-5 md:leading-6 lg:leading-7;
+  }
+  /* heading */
+  h1 {
+    @apply font-black lg:text-[50px] md:text-[44px] sm:text-[36px] text-[28px];
+  }
+  h3 {
+    @apply font-black lg:text-[40px] md:text-[32px] sm:text-[24px] text-[18px];
+  }
+  h5 {
+    @apply font-black lg:text-[24px] md:text-[20px] sm:text-[18px] text-[16px];
+  }
+  h6 {
+    @apply font-black lg:text-[20px] md:text-[18px] sm:text-[16px] text-[12px];
+  }
+
+  /* splide button */
+  .splide-button {
+    @apply border-2 bg-transparent border-secondary !important;
+  }
+}

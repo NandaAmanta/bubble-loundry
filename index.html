@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind daisy -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./styles/app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav>
+      <div
+        class="fixed shadow-md z-50 navbar font-poppins bg-white"
+        id="navbarTop"
+      >
+        <div
+          class="grid w-full grid-flow-col px-6 mx-auto sm:px-16 xl:container xl:px-32 max-w-7xl"
+        >
+          <div class="flex">
+            <a href="#Hero">
+              <img
+                id="navLogo"
+                src="./images/logo.png"
+                alt=""
+                class="w-full h-8 md:h-16"
+              />
+            </a>
+          </div>
+          <!-- mobile -->
+          <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+          <div class="flex-none lg:hidden text-end">
+            <label
+              for="my-drawer-3"
+              aria-label="open sidebar"
+              class="justify-center text-white btn btn-square btn-ghost"
+            >
+              <svg
+                id="hamburger"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-6 h-6 stroke-current text-[#1e1e1e]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+          </div>
+          <div class="drawer-side">
+            <label
+              for="my-drawer-3"
+              aria-label="close sidebar"
+              class="drawer-overlay"
+            ></label>
+            <ul class="min-h-full p-4 w-80 bg-white">
+              <div class="flex justify-end">
+                <label
+                  for="my-drawer-3"
+                  aria-label="close sidebar"
+                  class="cursor-pointer drawer-overlay text-end btn btn-square btn-ghost"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inline-block w-8 h-8 stroke-current"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </label>
+              </div>
+              <li>
+                <a
+                  id="drawer-link"
+                  class="px-5 py-2 lg:text-[16px] md:text-[14px] text-[12px] mb-3 flex hover:bg-gray-100 rounded-[50px] font-regular text-[#1e1e1e]"
+                  href="#Hero"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  id="drawer-link"
+                  class="px-5 py-2 lg:text-[16px] md:text-[14px] text-[12px] mb-3 flex hover:bg-gray-100 rounded-[50px] font-regular text-[#1e1e1e]"
+                  href="#Tentang"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  id="drawer-link"
+                  class="px-5 py-2 lg:text-[16px] md:text-[14px] text-[12px] mb-3 flex hover:bg-gray-100 rounded-[50px] font-regular text-[#1e1e1e]"
+                  href="#Pelayanan"
+                  >Pelayanan Kami</a
+                >
+              </li>
+              <li class="text-center">
+                <a
+                  href="https://wa.me/6287898139328"
+                  class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-[#2FA0D0] lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 flex justify-center w-full leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-white bg-[#2FA0D0]"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- desktop -->
+          <ul
+            class="items-center justify-end hidden grid-flow-col py-4 gap-14 lg:grid"
+          >
+            <li>
+              <a
+                class="text-[#1e1e1e] lg:text-[16px] md:text-[14px] text-[12px] transition-all font-poppins hover:text-[#2FA0D0] font-regular sectionP navLink"
+                href="#Hero"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#1e1e1e] lg:text-[16px] md:text-[14px] text-[12px] transition-all font-poppins hover:text-[#2FA0D0] font-regular sectionP navLink"
+                href="#Tentang"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#1e1e1e] lg:text-[16px] md:text-[14px] text-[12px] transition-all font-poppins hover:text-[#2FA0D0] font-regular sectionP navLink"
+                href="#Pelayanan"
+                >Pelayanan Kami</a
+              >
+            </li>
+            <li>
+              <!-- You can open the modal using ID.showModal() method -->
+              <a
+                href="https://wa.me/6287898139328"
+                class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-[#2FA0D0] lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-white bg-[#2FA0D0]"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero start -->
+    <div
+      class="hero min-h-screen place-items-center bg-cover bg-center"
+      style="background-image: url('./images/hero-bg.jpg')"
+      id="Hero"
+    >
+      <div
+        class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10 sm:py-16 text-white"
+      >
+        <div
+          class="grid content-center grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10"
+        >
+          <div class="text lg:order-first order-last lg:mt-10">
+            <h1
+              class="lg:text-[65px] md:text-[55px] sm:text-[45px] text-[30px] font-bold"
+            >
+              Bersih Tanpa Repot, Setiap Saat
+            </h1>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#F1F1F1]"
+            >
+              Tidak perlu repot dengan cucian menumpuk. Dengan teknologi canggih
+              dan tim profesional, kami menjamin setiap helai pakaian Anda
+              bersih sempurna. Pesan layanan kami sekarang!
+            </p>
+            <div class="mt-10">
+              <a
+                href="#Tentang"
+                class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-white lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#1e1e1e] hover:bg-white bg-transparent"
+                >Selengkapnya</a
+              >
+            </div>
+          </div>
+          <div class="image flex justify-center lg:justify-end mt-10 lg:mt-0">
+            <img src="./images/laundry.png" alt="" class="w-10/12" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- hero end -->
+
+    <!-- ! section 1 start -->
+    <section id="Tentang">
+      <div
+        class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10 sm:py-16 bg-white"
+      >
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="image">
+            <img src="./images/section-1-image.png" alt="" class="w-full" />
+          </div>
+          <div class="text w-full lg:w-5/12">
+            <div
+              class="shadow-xl px-6 py-8 md:p-10 bg-white lg:-ml-40 rounded-lg"
+            >
+              <p
+                class="md:text-[18px] sm:text-[16px] text-[12px] tracking-[4px] text-[#2FA0D0] font-bold uppercase"
+              >
+                kenapa kami
+              </p>
+              <h1
+                class="font-bold text-[#1e1e1e] lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+              >
+                Bebas dari Cucian
+              </h1>
+              <div class="icon-text flex items-center mt-4">
+                <img
+                  src="./images/fast-delivery.png"
+                  alt=""
+                  class="h-10 mr-6"
+                />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Jadwal Penjemputan Laundry yang Mudah
+                </p>
+              </div>
+              <div class="icon-text flex items-center mt-4">
+                <img
+                  src="./images/laundry-machine.png"
+                  alt=""
+                  class="h-10 mr-6"
+                />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Dicuci Terpisah dari Yang Lain
+                </p>
+              </div>
+              <div class="icon-text flex items-center mt-4">
+                <img src="./images/tshirt.png" alt="" class="h-10 mr-6" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Kebersihan dan Kesegaran Maksimal
+                </p>
+              </div>
+              <div class="icon-text flex items-center mt-4">
+                <img src="./images/pay.png" alt="" class="h-10 mr-6" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Pembayaran Mudah dengan Tunai
+                </p>
+              </div>
+              <div class="icon-text flex items-center mt-4">
+                <img src="./images/transparency.png" alt="" class="h-10 mr-6" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Harga Transparan - Tanpa Biaya Tersembunyi
+                </p>
+              </div>
+              <div class="mt-10">
+                <a
+                  href="https://wa.me/6287898139328"
+                  class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-[#2FA0D0] lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-white bg-[#2FA0D0]"
+                  >Hubungi Kami</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section 1 end -->
+
+    <!-- ! section 2 start profesional -->
+    <section
+      class="place-items-center bg-cover bg-center"
+      style="background-image: url('./images/bg-pro.jpg')"
+    >
+      <div
+        class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10 sm:py-16"
+      >
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 lg:gap-10">
+          <div class="text lg:order-first order-last">
+            <p
+              class="md:text-[18px] sm:text-[16px] text-[12px] tracking-[4px] text-white font-bold uppercase"
+            >
+              PROFESIONAL
+            </p>
+            <h1
+              class="font-bold text-white lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+            >
+              Kami mengumpulkan, membersihkan, dan mengantarkan cucian ke hotel
+              atau villa Anda
+            </h1>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#E4E4E4]"
+            >
+              Demi kenyamanan Anda, kami menyediakan layanan penjemputan dan
+              pengantaran cucian gratis tepat waktu. Anggota tim kami yang
+              berdedikasi akan memastikan prosesnya berjalan lancar.
+            </p>
+            <div class="mt-6 lg:mt-10">
+              <a
+                href="https://wa.me/6287898139328"
+                class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-white lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-white bg-transparent"
+                >Hubungi Kami</a
+              >
+            </div>
+          </div>
+          <div class="image">
+            <img src="./images/Group 5.png" alt="" class="lg:-mb-32" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section 2 end  -->
+
+    <!-- ! section 3 pelayanan start -->
+    <section id="Pelayanan">
+      <div
+        class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10 sm:py-20"
+      >
+        <div class="text-center mt-10">
+          <p
+            class="md:text-[18px] sm:text-[16px] text-[12px] tracking-[4px] text-[#2FA0D0] font-bold uppercase"
+          >
+            Pelayanan
+          </p>
+          <h1
+            class="font-bold text-[#1e1e1e] lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+          >
+            Apa yang kami sediakan
+          </h1>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-16 lg:gap-6 mt-16 lg:mt-20">
+          <div
+            class="lg:w-full sm:w-8/12 mx-auto rounded-xl shadow-md border-[1px] border-[#F1F1F1] card-service p-6 sm:p-10 flex flex-col justify-center text-center"
+          >
+            <div
+              class="icon p-6 border-2 bg-white border-[#2FA0D0] rounded-full mx-auto -mt-16 lg:-mt-20 mb-6"
+            >
+              <img src="./images/house-2.png" alt="" class="h-10 md:h-16" />
+            </div>
+            <h5
+              class="lg:text-[24px] text-[#1e1e1e] font-bold md:text-[20px] sm:text-[18px] text-[16px]"
+            >
+              Home Service
+            </h5>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+            >
+              Layanan laundry langsung di depan pintu Anda! Kami hadir untuk
+              mengambil dan mengantarkan cucian Anda dengan cepat dan efisien.
+            </p>
+          </div>
+          <div
+            class="lg:w-full sm:w-8/12 mx-auto rounded-xl shadow-md border-[1px] border-[#F1F1F1] card-service p-6 sm:p-10 flex flex-col justify-center text-center"
+          >
+            <div
+              class="icon p-6 border-2 bg-white border-[#2FA0D0] rounded-full mx-auto -mt-16 lg:-mt-20 mb-6"
+            >
+              <img
+                src="./images/washing-machine.png"
+                alt=""
+                class="h-10 md:h-16"
+              />
+            </div>
+            <h5
+              class="lg:text-[24px] text-[#1e1e1e] font-bold md:text-[20px] sm:text-[18px] text-[16px]"
+            >
+              Cuci Ekpress 3 jam
+            </h5>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+            >
+              Butuh pakaian bersih dalam waktu singkat? Layanan Cuci Ekspres
+              kami siap mengembalikan cucian Anda dalam waktu hanya 3 jam.
+            </p>
+          </div>
+          <div
+            class="lg:w-full sm:w-8/12 mx-auto rounded-xl shadow-md border-[1px] border-[#F1F1F1] card-service p-6 sm:p-10 flex flex-col justify-center text-center"
+          >
+            <div
+              class="icon p-6 border-2 bg-white border-[#2FA0D0] rounded-full mx-auto -mt-16 lg:-mt-20 mb-6"
+            >
+              <img
+                src="./images/washing-machine-2.png"
+                alt=""
+                class="h-10 md:h-16"
+              />
+            </div>
+            <h5
+              class="lg:text-[24px] text-[#1e1e1e] font-bold md:text-[20px] sm:text-[18px] text-[16px]"
+            >
+              Cuci Regular
+            </h5>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+            >
+              Percayakan pakaian Anda pada layanan Cuci Regular kami. Dengan
+              perhatian khusus pada setiap helai kain, menghasilkan cucian yang
+              bersih.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section 3 pelayanan end -->
+
+    <!-- ! section 4 CTA start -->
+    <section
+      class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10"
+    >
+      <div
+        class="place-items-center bg-cover bg-center py-10 sm:py-20 rounded-xl"
+        style="background-image: url('./images/bg-cta.png')"
+      >
+        <div class="hero-content text-center">
+          <div class="w-full lg:w-10/12">
+            <p
+              class="md:text-[18px] sm:text-[16px] text-[12px] tracking-[4px] text-[#2FA0D0] font-bold uppercase"
+            >
+              Hubungi Sekarang
+            </p>
+            <h1
+              class="font-bold text-white lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+            >
+              Jangan khawatir lagi dengan noda pada kemeja favoritmu
+            </h1>
+            <p
+              class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#DCDCDC]"
+            >
+              Sebagai spesialis dalam layanan pencucian pakaian, kami selalu
+              berusaha memberikan layanan terbaik untuk memastikan pengalaman
+              yang luar biasa.
+            </p>
+            <div class="mt-6 lg:mt-10">
+              <a
+                href="https://wa.me/6287898139328"
+                class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-[#2FA0D0] lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-transparent bg-[#2FA0D0]"
+                >Hubungi Kami</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section 4 CTA end -->
+
+    <!-- ! section 5 Question start-->
+    <section>
+      <div class="xl:container max-w-7xl mx-auto px-6 sm:px-16 xl:px-32 py-10">
+        <div class="flex flex-col lg:flex-row gap-10">
+          <div class="help basis-5/12">
+            <div
+              class="box flex flex-col text-center justify-center p-10 border-[1px] border-[#959595] rounded-xl"
+            >
+              <img
+                src="./images/customer-service.png"
+                class="w-4/12 mb-6 mx-auto"
+                alt=""
+              />
+              <h1
+                class="font-bold text-[#1e1e1e] lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+              >
+                Butuh Bantuan?
+              </h1>
+              <div class="mt-6 lg:mt-10">
+                <a
+                  href="https://wa.me/6287898139328"
+                  class="lg:px-12 lg:py-4 md:px-10 md:py-3 px-8 py-2 border-2 border-[#2FA0D0] lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 rounded-[50px] text-white transition-all hover:text-[#2FA0D0] hover:bg-transparent bg-[#2FA0D0]"
+                  >Hubungi Kami</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="Question basis-7/12 flex flex-col gap-3 lg:gap-6">
+            <h1
+              class="font-bold text-[#1e1e1e] lg:text-[46px] md:text-[40px] sm:text-[34px] text-[30px]"
+            >
+              Ada Pertanyaan?
+            </h1>
+            <div class="collapse shadow-md border-[1px] border-[#F4F4F4]">
+              <input type="checkbox" checked="checked" />
+              <div class="collapse-title flex items-center gap-4">
+                <img src="./images/problem.png" class="h-10" alt="" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595] font-bold"
+                >
+                  Apakah pakaian saya dicuci bersama pakaian orang lain?
+                </p>
+              </div>
+              <div class="collapse-content">
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Tidak, sama sekali tidak. Anda tidak perlu khawatir karena
+                  setiap pesanan dicuci secara terpisah. Kami yang mengurus
+                  pakaian Anda!
+                </p>
+              </div>
+            </div>
+            <div class="collapse shadow-md border-[1px] border-[#F4F4F4]">
+              <input type="checkbox" />
+              <div class="collapse-title flex items-center gap-4">
+                <img src="./images/problem.png" class="h-10" alt="" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595] font-bold"
+                >
+                  Apakah Anda menyediakan layanan untuk hotel?
+                </p>
+              </div>
+              <div class="collapse-content">
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Ya, kami mengkhususkan diri dalam layanan binatu hotel,
+                  termasuk penjemputan dan pengantaran ke dan dari hotel Anda.
+                  Untuk informasi lebih lanjut, silakan kunjungi halaman area
+                  jangkauan kami.
+                </p>
+              </div>
+            </div>
+            <div class="collapse shadow-md border-[1px] border-[#F4F4F4]">
+              <input type="checkbox" />
+              <div class="collapse-title flex items-center gap-4">
+                <img src="./images/problem.png" class="h-10" alt="" />
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595] font-bold"
+                >
+                  Sampai mana laundry ini melayani antar jemput?
+                </p>
+              </div>
+              <div class="collapse-content">
+                <p
+                  class="lg:text-[16px] md:text-[14px] text-[12px] sm:leading-7 leading-5 lg:leading-8 text-[#959595]"
+                >
+                  Kami menyediakan layanan antar jemput gratis dalam radius 1 km
+                  dari lokasi kami. Untuk area di luar radius 1 km, akan
+                  dikenakan biaya tambahan yang terjangkau. Kami berkomitmen
+                  untuk memberikan kemudahan dan kenyamanan bagi semua pelanggan
+                  kami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! section 5 Question end-->
+
+    <!-- ! footer start -->
+    <footer class="footer footer-center bg-[#2FA0D0] p-10">
+      <div>
+        <a href="#Hero">
+          <img
+            id="navLogo"
+            src="./images/logo-white.png"
+            alt=""
+            class="w-full h-8 md:h-16"
+          />
+        </a>
+      </div>
+      <nav class="grid grid-flow-col gap-4">
+        <a
+          class="text-white lg:text-[16px] md:text-[14px] text-[12px] transition-all hover:text-gray-300 font-regular sectionP navLink"
+          href="#Hero"
+          >Beranda</a
+        >
+        <a
+          class="text-white lg:text-[16px] md:text-[14px] text-[12px] transition-all hover:text-gray-300 font-regular sectionP navLink"
+          href="#Tentang"
+          >Tentang Kami</a
+        >
+        <a
+          class="text-white lg:text-[16px] md:text-[14px] text-[12px] transition-all hover:text-gray-300 font-regular sectionP navLink"
+          href="#Pelayanan"
+          >Pelayanan Kami</a
+        >
+      </nav>
+      <nav>
+        <a
+          href="https://wa.me/6287898139328"
+          class="text-white transition-all hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-whatsapp"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+            />
+          </svg>
+        </a>
+      </nav>
+      <aside>
+        <p
+          class="text-white lg:text-[16px] md:text-[14px] text-[12px] transition-all font-regular"
+        >
+          Copyright ©
+          <span id="date"></span>
+          - Bubble laundry
+        </p>
+      </aside>
+    </footer>
+    <!-- ! footer end -->
+  </body>
+
+  <script>
+    document.getElementById("date").innerHTML = new Date().getFullYear();
+  </script>
+</html>
